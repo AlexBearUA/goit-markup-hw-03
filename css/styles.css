@@ -20,6 +20,28 @@ body {
   font-size: 14px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section {
+  padding: 94px 0;
+}
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -39,7 +61,8 @@ body {
 
 /* Logo styles */
 
-.logo {
+.logo-header,
+.logo-footer {
   font-family: 'Raleway', sans-serif;
   color: var(--accent-color);
   text-decoration: none;
@@ -50,32 +73,67 @@ body {
 }
 
 .logo-header {
-  color: var(--logo-end-color);
+  margin-right: 93px;
+}
 
+.logo-header-end {
+  color: var(--logo-end-color);
   line-height: 1.38;
 }
 
 .logo-footer {
-  color: var(--main-background-color);
+  display: block;
+  margin-bottom: 20px;
+}
 
+.logo-footer-end {
+  color: var(--main-background-color);
   line-height: 1.38;
 }
 
 /* Header styles */
 
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.site-nav,
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
 .nav,
 .contacts {
+  display: flex;
+  align-items: center;
+
   font-weight: 500;
   line-height: 1.17;
   letter-spacing: 0.02em;
 }
 
+.nav .item:not(:last-child),
+.contacts .item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .nav-link {
+  display: block;
+  padding: 32px 0;
+
   text-decoration: none;
   color: var(--title-text-color);
 }
 
+.contacts {
+  margin-left: auto;
+}
+
 .contacts-link {
+  display: block;
+  padding: 32px 0;
+
   text-decoration: none;
   color: var(--main-text-color);
 }
@@ -94,6 +152,7 @@ body {
 /* Footer styles */
 
 .footer {
+  padding: 60px 0;
   background-color: var(--secondary-background-color);
 }
 
@@ -113,6 +172,10 @@ body {
   letter-spacing: 0.03em;
 }
 
+.adress .item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 .footer-address:hover,
 .footer-address:focus,
 .footer-contacts:hover,
@@ -125,10 +188,17 @@ body {
 /* Hero section styles */
 
 .hero {
+  text-align: center;
   background-color: var(--secondary-background-color);
 }
 
 .hero-title {
+  width: 696px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -138,6 +208,10 @@ body {
 }
 
 .hero-button {
+  padding: 10px 32px;
+  border: 0;
+  border-radius: 4px;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
@@ -154,13 +228,33 @@ body {
 
 /* Sections styles */
 
+/* Our conveniences section styles */
+
 .conven-title {
+  margin-bottom: 10px;
+
   font-weight: 700;
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
   text-transform: uppercase;
   font-size: inherit;
+}
+
+.conven-text {
+  line-height: 1.71;
+}
+
+.conveniences {
+  display: flex;
+}
+
+.conveniences .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.conveniences .item {
+  width: 25%;
 }
 
 .section-title {
